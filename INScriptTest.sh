@@ -9,6 +9,7 @@ t3="======================================================"
 
 # INICIO DEL SCRIPT
 clear
+echo
 echo $t1
 echo "$t2"
 echo $t3
@@ -55,6 +56,7 @@ contra_segura() {
 }
 
 # CREAR NOMBRE DE HOST Y CONTRASEÑA DE ROOT
+echo
 echo $t1
 echo "$t2"
 echo $t3
@@ -71,6 +73,7 @@ contra_segura "ROOT" ROOT_PASS
 clear
 
 # CREAR NOMBRE DE USUARIO Y CONTRASEÑA
+echo
 echo $t1
 echo "$t2"
 echo $t3
@@ -87,6 +90,7 @@ contra_segura "usuario $USER_NAME" USER_PASS
 clear
 
 # CONFIRMAR INSTALACION CONTROLADORES GRAFICOS AMD
+echo
 echo $t1
 echo "$t2"
 echo $t3
@@ -103,6 +107,7 @@ clear
 
 # MOSTRAR RESUMEN Y CONFIRMAR
 while true; do
+    echo
     echo $t1
     echo "$t2"
     echo $t3
@@ -148,6 +153,9 @@ done
 clear
 
 # FORMATEAR Y CREAR LAS NUEVAS PARTICIONES
+echo
+echo
+echo
 wipefs -a $disco
 parted -s -a optimal $disco mklabel gpt
 parted -s -a optimal $disco mkpart ESP fat32 1MiB 2049MiB
@@ -388,8 +396,6 @@ echo "========================="
 echo "   INSTALACION EXITOSA"
 echo "========================="
 echo
-echo
-echo
 
 # REINICIAR
 echo "==> ¿Desea reiniciar ahora?"
@@ -408,7 +414,6 @@ while true; do
         2)
             echo
             echo "<< INSTALACION FINALIZADA, PUEDE REINICIAR MANUALMENTE >>"
-            echo
             echo
             echo
             exit 0
