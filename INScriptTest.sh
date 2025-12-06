@@ -243,7 +243,7 @@ HOST_NAME="$HOST_NAME"
 disco="$disco"
 part1="$part1"
 part2="$part2"
-opcion="$opcion"
+opcion2="$opcion2"
 
 # CONFIGURAR ZONA HORARIA
 ln -sf /usr/share/zoneinfo/America/Bogota /etc/localtime
@@ -350,7 +350,7 @@ sed -i '/#\[multilib\]/ { s/#\[multilib\]/[multilib]/; n; s/#Include = /Include 
 echo
 echo
 echo
-if [[ "$opcion" == "1" ]]; then
+if [[ "$opcion2" == "1" ]]; then
     while true; do
         if pacman -Syu --noconfirm mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon xf86-video-amdgpu; then
             break
