@@ -125,7 +125,7 @@ while true; do
     echo "   $USER_NAME"
     echo
     echo "-> Instalar controladores AMD:"
-    if [[ "$opcion" == "1" ]]; then
+    if [[ "$opcion2" == "1" ]]; then
         echo "   Sí"
     else
         echo "   No"
