@@ -205,10 +205,7 @@ pacman -Syy
 while true; do
     if pacstrap -K /mnt base linux linux-firmware networkmanager intel-ucode sudo btrfs-progs; then
         echo
-        echo
         echo "<< PAQUETES INSTALADOS CORRECTAMENTE >>"
-        echo
-        echo
         break
     else
         echo
