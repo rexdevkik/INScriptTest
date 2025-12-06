@@ -229,7 +229,7 @@ done
 # GENERAR ARCHIVO FSTAB
 genfstab -U /mnt >> /mnt/etc/fstab
 
-export ROOT_PASS USER_PASS USER_NAME HOST_NAME disco part1 part2 opcion
+export ROOT_PASS USER_PASS USER_NAME HOST_NAME disco part1 part2 opcion2
 
 # CREAR SCRIPT PARA LA POST INSTALACION
 cat > /mnt/PostInScript.sh << 'END'
@@ -402,8 +402,8 @@ echo "  [1] Sí, reiniciar ahora"
 echo "  [2] No, salir sin reiniciar"
 echo
 while true; do
-    read -p "==> Elija su opción: " opcion2
-    case "$opcion2" in
+    read -p "==> Elija su opción: " opcion3
+    case "$opcion3" in
         1)
             reboot
             ;;
