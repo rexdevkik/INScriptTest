@@ -404,8 +404,6 @@ while true; do
     read -p "==> Elija su opción: " opcion2
     case "$opcion2" in
         1)
-            echo
-            echo "<< REINICIANDO SISTEMA... >>"
             reboot
             ;;
         2)
