@@ -3,8 +3,9 @@
 # DETENER EL SCRIPT SI ALGO FALLA
 set -e
 
+# TITULO DEL SCRIPT
 t1="======================================================"
-t2="   SCRIPT DE INSTALACION ARCH LINUX INScript-v1.2.2"
+t2="   SCRIPT DE INSTALACION ARCH LINUX INScript-v1.3.0"
 t3="======================================================"
 
 # INICIO DEL SCRIPT
@@ -102,7 +103,7 @@ echo
 echo "  [1] Sí"
 echo "  [2] No"
 echo
-read -p "==> Elija su opción: " opcion
+read -p "==> Elija su opción: " opcion2
 clear
 
 # MOSTRAR RESUMEN Y CONFIRMAR
@@ -380,7 +381,7 @@ END
 chmod +x /mnt/PostInScript.sh
 
 # ABRIR CHROOT Y EJECUTAR EL SCRIPT DE POST INSTALACION
-env ROOT_PASS="$ROOT_PASS" USER_PASS="$USER_PASS" USER_NAME="$USER_NAME" HOST_NAME="$HOST_NAME" disco="$disco" part1="$part1" part2="$part2" opcion="$opcion" arch-chroot /mnt /PostInScript.sh
+env ROOT_PASS="$ROOT_PASS" USER_PASS="$USER_PASS" USER_NAME="$USER_NAME" HOST_NAME="$HOST_NAME" disco="$disco" part1="$part1" part2="$part2" opcion2="$opcion2" arch-chroot /mnt /PostInScript.sh
 
 # DESMONTAR AL FINALIZAR LA INSTALACION 
 umount -R /mnt
